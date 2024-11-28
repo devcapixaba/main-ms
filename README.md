@@ -41,10 +41,6 @@ Execute o serviço principal no Docker, conectando-o à rede compartilhada.
 docker network connect shared-network main-ms-app-1
 ```
 
-### 6. Acessar o serviço principal
-O serviço principal estará acessível em:  
-[http://localhost:3000](http://localhost:3000)
-
 ### 6. Acessar o swagger doc
 O serviço principal estará acessível em:  
 [http://localhost:3000/api/docs](http://localhost:3000/api/docs)
