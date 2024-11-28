@@ -9,8 +9,8 @@ Este é o serviço principal do microsserviço, que pode ser integrado com o **B
 Primeiro, clone o repositório do serviço principal.
 
 ```bash
-git clone <URL-DO-REPOSITORIO-MAIN-SERVICE>
-cd <PASTA-DO-SERVIÇO-PRINCIPAL>
+git clone https://github.com/devcapixaba/main-ms.git
+cd main-ms
 ```
 
 ### 2. Instalar dependências
@@ -31,16 +31,20 @@ docker network create shared-network
 Crie a imagem do Docker para o serviço principal.
 
 ```bash
-docker build -t main-service .
+docker-compose up --build
 ```
 
 ### 5. Subir o serviço principal no Docker
 Execute o serviço principal no Docker, conectando-o à rede compartilhada.
 
 ```bash
-docker run --network shared-network -p 3000:3000 --name main-service main-service
+docker network connect shared-network main-ms-app-1
 ```
 
 ### 6. Acessar o serviço principal
 O serviço principal estará acessível em:  
 [http://localhost:3000](http://localhost:3000)
+
+### 6. Acessar o swagger doc
+O serviço principal estará acessível em:  
+[http://localhost:3000/api/docs](http://localhost:3000/api/docs)
