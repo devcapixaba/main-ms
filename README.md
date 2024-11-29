@@ -21,7 +21,7 @@ npm install
 ```
 
 ### 3. Criar uma rede compartilhada
-Crie uma rede Docker para que os serviços se comuniquem.
+Crie uma rede Docker para que os serviços se comuniquem (caso não exista a rede já criada junto ao main-ms)
 
 ```bash
 docker network create shared-network
